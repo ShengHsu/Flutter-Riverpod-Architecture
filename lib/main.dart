@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo_riverpod/pages/home/home_page.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final helloWorldProvider = Provider((_) => 'Hello world');
-
 void main() {
   runApp(
     const ProviderScope(
@@ -17,8 +15,6 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final String value = ref.watch(helloWorldProvider);
-
     return const MaterialApp(
       home: HomePage(),
     );
